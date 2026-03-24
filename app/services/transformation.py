@@ -50,3 +50,4 @@ def normalize(df, columns):
         np.linalg.norm(df[columns], axis=1), axis=0
     )
     return df
+

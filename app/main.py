@@ -1,10 +1,17 @@
 from fastapi import FastAPI
-from .routers import user
+from .api import user, feature_selection, imbalanced, reducedimension, feature_engineering, encoding, transformation, pipeline
 
 app = FastAPI()
 
-# This merges the routes into the main app
+# Include routers
 app.include_router(user.router)
+app.include_router(feature_selection.router)
+app.include_router(imbalanced.router)
+app.include_router(reducedimension.router)
+app.include_router(feature_engineering.router)
+app.include_router(encoding.router)
+app.include_router(transformation.router)
+app.include_router(pipeline.router)
 
 @app.get("/")
 async def root():

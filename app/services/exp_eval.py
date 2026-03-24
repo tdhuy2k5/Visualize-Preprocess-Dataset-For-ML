@@ -111,7 +111,7 @@ def exp_compiler(df: pd.DataFrame, expression: str, new_col: str):
     global dfs
     dfs = df
     calculate(expression, len(expression))
-    return dp_result.get(-1, None)
+    df[new_col] = dp_result.get(-1, None)
 
 def calc(func_stack, ops_stack):
     vals = func_stack[:]
