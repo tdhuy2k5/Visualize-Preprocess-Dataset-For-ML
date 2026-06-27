@@ -1,6 +1,0 @@
-pandas
-numpy
-umap-learn
-imbalanced-learn
-textblob
-scikit-learn
